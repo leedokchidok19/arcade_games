@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>전자오락실 - 언제나 즐거운 곳</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!--header-->
-<header style="background-color: dodgerblue;">
+<header>
     <navbar id="navbar">
         <!--toggle button
         <button class="navbar__toggle-btn">
@@ -28,7 +29,7 @@
 <!--header-->
 
 <!--carousel section-->
-<section id="carousel" style="background-color: azure;">
+<section id="carousel">
     
 </section>
 <!--carousel section-->
@@ -36,10 +37,47 @@
 <!--recommend & login section-->
 <section id="content">
     <section id="recommend">
-        
+        <h2>추천 게임</h2>
+        <ul class="recommend__games">
+            <li class="games__item">
+                <div class="games__item-img">
+                    <img src="" alt="game-img">
+                </div>
+                <div class="games__item-desc">
+                    <div class="item__recommend">신규</div>
+                    <div class="item__gameNm">끝말잇기</div>
+                    <div class="item__description">
+                        최근 출시한
+                    </div>
+                </div>
+            </li>
+            <li class="games__item">
+                <div class="games__item-img">
+                    <img src="" alt="game-img">
+                </div>
+                <div class="games__item-desc">
+                    <div class="item__recommend">인기</div>
+                    <div class="item__gameNm">구구단</div>
+                    <div class="item__description">
+                        신규 업데이트
+                    </div>
+                </div>
+            </li>
+        </ul>
     </section>
     <section id="login">
-        
+        <div class="login__btn">
+            <p><a href="">ID 로그인</a></p>
+        </div>
+        <div class="lgoin__guest">
+            <p>게스트 로그인</p>
+        </div>
+        <div class="login__social">
+            <p>다른 계정 간편 로그인</p>
+            <span class="login__google"></span>
+            <span class="login__naver"></span>
+            <span class="login__facebook"></span>
+        </div>
     </section>
 </section>
 <!--recommend & login section-->
