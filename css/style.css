@@ -109,3 +109,39 @@ navbar {
 }
 /*login*/
 /*recommend & login section*/
+
+/*all games section*/
+#allgames {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto 0;
+    max-width: var(--max-width);
+}
+.allgames__title {
+    width: 100%;
+}
+.allgames__title-div {
+    display: flex;
+    width: 100%;
+}
+.allgames__title-div:last-child {
+    background-color: goldenrod;
+}
+.allgames__title h2 {
+    width: 50%;
+}
+.allgames__search {
+    width: 50%;
+    text-align: right;
+    transform: translateY(50%);
+}
+.allgames__search input {
+    font-size: 1.25rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+.game__tag-radio {
+    /*display: none;*/
+}
+/*all games section*/
