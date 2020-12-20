@@ -22,7 +22,7 @@
         -->
         <!--navbar menu-->
         <div class="navbar__logo">
-            <img src="https://via.placeholder.com/150x60.png/3366ff/000000/?text=150x60+logo" alt="logo">
+            <img src="images/logo_leedok.png" alt="logo">
         </div>
     </navbar>
 </header>
@@ -30,41 +30,40 @@
 
 <!--carousel section-->
 <section id="carousel">
-    
+    <div class="carousel__container">
+        <a class="prev carousel_btn" data-carousel-index="-1">&lt;</a>
+        <a class="next carousel_btn" data-carousel-index="1">&gt;</a>
+
+        <div class="carousel__row carousel__active">
+            <img src="https://cdn.pixabay.com/photo/2020/01/11/14/36/winter-4757707__340.jpg">
+        </div>
+        <div class="carousel__row">
+            <img src="https://cdn.pixabay.com/photo/2020/04/07/13/12/bicycle-5013316__340.jpg">
+        </div>
+        <div class="carousel__row">
+            <img src="https://cdn.pixabay.com/photo/2020/12/14/21/36/mountains-5832116__340.jpg">
+        </div>
+    </div>
 </section>
 <!--carousel section-->
 
-<!--recommend & login section-->
+<!--notice & login section-->
 <section id="content">
     <div class="content__title">
         <h2>공지사항</h2>
         <h2>고객센터</h2>
     </div>
-    <section id="recommend">
-        <ul class="recommend__games">
-            <li class="games__item">
-                <div class="games__item-img">
-                    <img src="" alt="game-img">
-                </div>
-                <div class="games__item-desc">
-                    <div class="item__recommend">신규</div>
-                    <div class="item__gameNm">끝말잇기</div>
-                    <div class="item__description">
-                        최근 출시한
-                    </div>
-                </div>
+    <section id="notice">
+        <ul class="notice__games">
+            <li class="notice__title">
+                <a href="javascript:alert('미구현');">
+                    <p>고전 게임 끝말잇기 - 패치</p>
+                </a>
             </li>
-            <li class="games__item">
-                <div class="games__item-img">
-                    <img src="" alt="game-img">
-                </div>
-                <div class="games__item-desc">
-                    <div class="item__recommend">인기</div>
-                    <div class="item__gameNm">구구단</div>
-                    <div class="item__description">
-                        신규 업데이트
-                    </div>
-                </div>
+            <li class="notice__title">
+                <a href="javascript:alert('미구현');">
+                    <p>신규 게임 출시 - 고전 게임 끝말잇기<p>
+                </a>
             </li>
         </ul>
     </section>
@@ -97,11 +96,11 @@
         </div>
         <div class="allgames__title-div">
             <span>
-                <input type="raido" class="game__tag-radio">
+                <input type="radio" class="game__tag-radio">
                 <label for="all">#전체</label>
             </span>
             <span>
-                <input type="raido" class="game__tag-radio">
+                <input type="radio" class="game__tag-radio">
                 <label for="rpg">#RPG</label>
             </span>
             <span>
@@ -109,13 +108,31 @@
                 <label for="Casual">#캐주얼</label>
             </span>
             <span>
-                <input type="raido" class="game__tag-radio">
+                <input type="radio" class="game__tag-radio">
                 <label for="card">#카드</label>
             </span>
             <span>
-                <input type="raido" class="game__tag-radio">
+                <input type="radio" class="game__tag-radio">
                 <label for="new">#신규</label>
             </span>
+        </div>
+    </div>
+    <div class="allgames__content">
+        <div class="game__info">
+            <div class="game-img">
+                <img src="" alt="images">
+            </div>
+            <div class="game__info-div">
+                <i>icon</i>
+                <h2>끝말잇기</h2>
+                <div class="info__content">
+                    끝말잇기 게임
+                </div>
+                <hr>
+                <div class="game__genre">
+                    캐주얼
+                </div>
+            </div>
         </div>
     </div>
    
@@ -128,6 +145,13 @@
     
 </footer>
 <!--footer-->
+
+<!--arrow up-->
+<button class="arrow-up">
+    <img src="images/arrow-up.svg" alt="arrow up">
+</button>
+
+<script src="js/app.js"></script>
 
 </body>
 </html>

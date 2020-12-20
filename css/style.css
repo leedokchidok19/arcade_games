@@ -1,5 +1,13 @@
 /*global*/
 :root {
+    /*color*/
+    --d-color: rgb(35, 177, 200);
+    --real-white: rgb(230, 230, 230);
+    --real-black: rgb(25, 25, 25);
+    --real-red: rgb(200, 35, 35);
+    --real-blue: rgb(35, 35, 200);
+    --body-color: rgb(187, 155, 169);
+    /*size*/
     --max-width: 1280px;
 }
 
@@ -11,6 +19,7 @@
 }
 
 body {
+    background-color: var(--body-color);
     margin: 0;
     cursor: default;
 }
@@ -19,25 +28,43 @@ a {
     text-decoration: none;
 }
 
+ul {
+    padding: 0;
+}
+
 li {
     list-style: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
 }
 
 /*universal tags*/
 
 /*header*/
 header {
-    background-color: dodgerblue;
+    /*background-color: dodgerblue;*/
     display: flex;
     justify-content: center;
 }
 
 navbar {
-    background-color: lightgoldenrodyellow;
+    background-color: var(--real-white);
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: var(--max-width);
+}
+.navbar__logo {
+    width: 150px;
+    height: 60px;
+}
+.navbar__logo > img{
+    width: 100%;
+    height: 100%;
 }
 /*header*/
 
@@ -48,18 +75,65 @@ navbar {
     max-width: var(--max-width);
     min-height: 500px;
 }
+/*position the image container (needed to position the left and right arrows)*/
+.carousel__container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+/*Hide the images by default*/
+.carousel__row {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.carousel__row > img{
+    width: 100%;
+    height: 100%;
+}
+
+/*next & previous buttons*/
+.carousel_btn {
+    cursor: pointer;
+    position: absolute;
+    padding: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    color: var(--real-black);
+    font-weight: bold;
+    font-size: 2rem;
+    /*
+    user-select: none;
+    -webkit-user-select: none;
+    https://developer.mozilla.org/ko/docs/Web/CSS/user-select
+    */
+}
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--d-color);
+}
+
+.carousel__active {
+    display: block;
+}
 /*carousel section*/
 
-/*recommend & login section*/
-/*recommend*/
+/*notice & login section*/
 #content {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    width: 100%;
     max-width: var(--max-width);
 }
 .content__title {
-    background-color: fuchsia;
+    /*background-color: fuchsia;*/
     display: flex;
     width: 100%;
     height: 80px;
@@ -69,31 +143,31 @@ navbar {
     padding: 0 1rem;
     width: 50%;
     line-height: 80px;
+    text-align: center;
 }
 .content__title h2:last-child {
     text-align: right;
+    font-size: 1.25rem;
 }
-#recommend {
-    background-color: dimgray;
+/*notice*/
+#notice {
+    background-color: var(--real-white);/*dimgray;*/
     margin-right: 2%;
     width: 53%;
 }
-.recommend__games {
-    background-color: beige;
-    display: flex;
-    padding: 0;
+.notice__title > a > p {
+    margin: 0.5rem;
+    padding: 0 0.25rem 0.125rem;
+    color: black;
+    font-size: 1.25rem;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
 }
-.games__item:nth-child(odd) {
-    background-color: aliceblue;
-}
-.games__item:nth-child(even) {
-    background-color: goldenrod;
-}
-/*recommend*/
+/*notice*/
 
 /*login*/
 #login {
-    background-color: greenyellow;
+    background-color: var(--real-white);/*greenyellow;*/
     display: flex;
     flex-direction: column;
     padding: 60px;
@@ -108,7 +182,7 @@ navbar {
     height: 50px;
 }
 /*login*/
-/*recommend & login section*/
+/*notice & login section*/
 
 /*all games section*/
 #allgames {
@@ -145,3 +219,25 @@ navbar {
     /*display: none;*/
 }
 /*all games section*/
+
+/*arrow up*/
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;/*보이지 않을 때는 클릭 이벤트가 발생되지 않게 막는다*/
+    transition:  all var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+/*arrow up*/
