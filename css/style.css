@@ -7,6 +7,7 @@
     --real-red: rgb(200, 35, 35);
     --real-blue: rgb(35, 35, 200);
     --body-color: rgb(187, 155, 169);
+    --background-none: rgba(0, 0, 0, 0);
     /*size*/
     --max-width: 1280px;
 }
@@ -220,20 +221,56 @@ navbar {
 }
 /*all games section*/
 
+/*footer*/
+footer {
+    background-color: var(--real-black);
+    position: relative;
+    margin: 0 auto;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: var(--max-width);
+    box-sizing: border-box;
+}
+
+.social {
+    text-align: right;
+}
+.social i {
+    background-color: var(--real-black);
+    color: var(--real-white);
+    font-size: 1.5rem;
+}
+.social i:hover {
+    color: var(--d-color);
+}
+.copyright > span {
+    text-transform: uppercase;
+}
+/*footer*/
+
 /*arrow up*/
 .arrow-up {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    padding: 0;
+    bottom: 100px;
+    right: 10px;
     width: 70px;
-    height: 70px;
-    font-size: 50px;
-    color: var(--color-white);
-    background-color: var(--color-pink);
-    border-radius: 50%;
+    text-align: left;
+    font-size: 1.25rem;
+    color: var(--real-white);
+    background-color: var(--background-none);
+    border: 1px solid var(--real-white);
     opacity: 0;
-    pointer-events: none;/*보이지 않을 때는 클릭 이벤트가 발생되지 않게 막는다*/
-    transition:  all var(--animation-duration) ease-in;
+    pointer-events: none;
+    transition:  all 0.7s ease-in;
+}
+.arrow-up:hover {
+    color: var(--d-color);
+    border: 1px solid var(--d-color);
+}
+.arrow-up > span {
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .arrow-up.visible {
