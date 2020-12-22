@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Chain - 끝말잇기</title>
+    <link rel="stylesheet" href="wordChain.css">
+</head>
+<body>
+
+    <section>
+        <div class="title">
+            <h1>끝말잇기</h1>
+            <input id="word" type="text" placeholder="단어를 입력하세요.">
+            <button>시작</button> 
+        </div>
+        <div>
+            <h2>결과</h2>
+            <p id="result"></p>
+        </div>
+    </section>
+
+<script>
+    const start_btn = document.querySelector('button');
+    start_btn.addEventListener('click', () => {
+        let word = document.querySelector('#word').value;
+        let result_word = document.querySelector('#result');
+
+        if(word === ''){
+            alert('단어를 입력해주세요.');
+        }else if(result_word.innerText === ''){
+            result_word.innerText = word;
+        }else if(word[0] === result_word.innerText[result_word.innerText.length - 1]){
+            result_word.innerText = word;
+        }
+    });
+</script>
+
+</body>
+</html>
