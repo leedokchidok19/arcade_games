@@ -178,9 +178,21 @@ navbar {
     text-align: center;
 }
 #login > div {
-    background-color: blueviolet;
+    background-color: var(--real-black);
+    margin: 0.125rem;
     width: 100%;
     height: 50px;
+    color: var(--real-white);
+    font-size: 1rem;
+}
+.login__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login__social > i {
+    margin: 0 5px;
+    font-size: 1.25rem;
 }
 /*login*/
 /*notice & login section*/
@@ -237,6 +249,10 @@ navbar {
 }
 .game__tag-radio {
     display: none;
+}
+.game__tag-radio:checked + label {
+    color: var(--real-blue);
+    font-weight: bold;
 }
 .allgames__content {
     display: flex;
