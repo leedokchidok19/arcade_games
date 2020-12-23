@@ -43,3 +43,12 @@ arrow_up.addEventListener('click', () => {
     window.scrollTo(0, 0);
 });
 //end arrow up
+
+//astric mark click
+const astric_mark = document.querySelector('#astric_mark');
+astric_mark.addEventListener('click', () => {
+    for(let i =0;i<5;i++){
+        console.log(' '.repeat(5-i)+'*'.repeat(2*i+1));
+    }
+});
+//end astric mark click
